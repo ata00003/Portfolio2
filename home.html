@@ -30,8 +30,14 @@
     </header>  
     </div>
     <main>
+        
         <div class="home">
-          <img class="camera1" src="images/mobilehome.png">
+            <img class="camera1" srcset="images/mobilehome.jpg 480w,
+                          images/desktophome.jpg 1600w"
+
+             sizes="(max-width: 480px) 480px,
+                         (max-width: 1600px) 1600px"
+             src="images/desktophome.jpg"  alt="camera and coffee">
         <h1>This is Me</h1>
         <p>Hi! I am Elif, coffee and tea lover. I am a photographer and web designer, and I draw illustration as a hobby.</p>
         <a class="button" href="about.html">Learn More</a>
