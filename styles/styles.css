@@ -89,6 +89,13 @@ h1,h2,h3,p{
 main{
   margin-top: 10%;
 }
+i  {
+  color: #74A4F0;
+  font-size:24px;
+  font-weight: bolder;
+  padding: 10px;
+
+}
 /***MOBILE HOME*******/
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 @media (max-width: 700px) {
@@ -122,17 +129,16 @@ main{
         display: relative;
         width: 100%;
       }
-      .home p,h1{
-        display: block;
-        width: 80%;
-        justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
-
-      }
-     .home h1,.home p{
+     .home{
        display: absolute;
-       transform: translate(0,-60px);
+       transform: translate(0,-90px);
+       width: 80%;
+       margin-left: auto;
+       margin-right: auto;
+     }
+     .button{
+        display: absolute;
+        transform: translate(0,-200px);
      }
       main p{
           line-height:50px;
@@ -140,7 +146,6 @@ main{
       }
       main a{
           font-size: 22px;
-          text-align: center;
           text-decoration: none;
       }
      /**** https://alvarotrigo.com/blog/hamburger-menu-css/****/
@@ -686,16 +691,27 @@ top-nav{
   .heading{
     margin-top:20px;
   }
-  .home{
-    display:block;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
+  p{
+      font-size: 20px;
+  }
+  .button{
+      font-size: 24px;
+      text-decoration: none;
+  }
+  i.fa{
+      font-size: 28px;
+      font-weight: 400;
+  }
+  .side-text{
+    width:40%;
+    margin-left:60%;
+    display: absolute;
+    transform: translate(-10px,-300px);
     }
+
   .camera1{
-    float:left;
-    margin-bottom:40%;
+    display: relative;
+    width: 50%;
   }
  .tablet-container{
    background-color: black;
