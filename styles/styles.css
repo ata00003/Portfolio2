@@ -96,6 +96,9 @@ i  {
   padding: 10px;
 
 }
+.button{
+    text-decoration: none;
+}
 /***MOBILE HOME*******/
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 @media (max-width: 700px) {
@@ -128,6 +131,7 @@ i  {
       .camera1{
         display: relative;
         width: 100%;
+        z-index: -1;
       }
      .home{
        display: absolute;
@@ -151,6 +155,7 @@ i  {
      /**** https://alvarotrigo.com/blog/hamburger-menu-css/****/
   .menu-button-container {
     display: flex;
+ 
   }
   .menu {
     position: absolute;
@@ -161,6 +166,7 @@ i  {
     width: 100%;
     justify-content: center;
     align-items: center;
+    z-index: 1;
   }
   #menu-toggle ~ .menu li{
     height: 0;
@@ -388,17 +394,14 @@ i  {
   }
 /********TABLET ABOUT*********/
 .about{
-  display: none;
+    width: 90%;
 }
 .tabletcamera2{
-  background:url(../images/about.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height:700px;
+    display: absolute;
+    z-index: 1;
 }
 .tabletcamera2 ul li{
+
   color:#E8E8E8;
   list-style: none;
   line-height: 50px;
@@ -406,9 +409,10 @@ i  {
 }
 .tabletcamera2 ul h2{
   margin-left:10%;
+  
 }
 .tabletcamera2 h2{
-  margin-top: 20%;
+  margin-top: 10%;
   margin-left: 10%;
 }
 .tabletstory h2{
@@ -470,7 +474,7 @@ i  {
   grid-column:7 / 10;
 }
 #gallery3{
-  grid-column: 3/ 8;
+  grid-column: 3/ 5;
 }
 #gallery1 img{ 
   width:100%;
@@ -480,6 +484,10 @@ i  {
   width:100%;
   height:60%;
 }
+#gallery3img{ 
+    width:50%;
+    height:60%;
+  }
 
 /********TABLET PHOTOGRAPHY*****/
 .photography-background{
@@ -727,33 +735,34 @@ footer .fa{
   padding-left: 5px;
   text-decoration: none;
 }
-  .about{
-    display: none;
-  }
-  .tabletcamera2{
-    background:url(../images/about.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-  }
+.about{
+    width: 90%;
+    display: relative;
+}
+
+.tabletcamera2{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 10%;
+}
+.part-1{
+    display: absolute;
+    transform: translate(-150px,50px)
+}
+.part-2{
+    border-radius: solid black 50%;
+
+}
+
   .tabletcamera2 ul li{
     color:#E8E8E8;
     list-style: none;
-    line-height: 50px;
-    margin-right:10%;
-    text-align: right;
-  }
-  .tabletcamera2 ul h2{
-    margin-right:10%;
+    line-height: 70px;
+    font-size: 22px;
   }
   .tabletcamera2 h2{
-    margin-top: 20%;
-    margin-right: 10%;
-    text-align: right;
-  }
-  .tabletstory h2{
-    text-align: center;
+      text-align: right;
+      font-size: 24px;
   }
   .story p{
     display: flex;
@@ -761,6 +770,7 @@ footer .fa{
     margin-right: auto;
     justify-content: center;
     width: 80%;
+    float: none;
   }
   .about-tablet-container{
     background:black;
