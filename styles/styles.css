@@ -105,6 +105,21 @@ main span{
 .home h1{
     color: #74A4F0;
 }
+
+.skiplinks ul{ 
+    position: relative;
+    list-style: none;
+  }
+  .skiplinks a{
+    position: absolute;
+    top:-20rem;
+  }
+  .skiplinks a:focus{
+    top:0;
+    background:pink;
+    display:block;
+    padding:8px;
+  }
 /***MOBILE HOME*******/
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 @media (max-width: 700px) {
