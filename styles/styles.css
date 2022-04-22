@@ -29,7 +29,7 @@ h1,h2,h3,p{
   padding: 0;
 }
 
-.menu > li {
+.menu > li  {
   margin: 0 1rem;
 }
 .menu > li a{
@@ -99,6 +99,12 @@ i  {
 .button{
     text-decoration: none;
 }
+main span{
+    color: #74A4F0;
+}
+.home h1{
+    color: #74A4F0;
+}
 /***MOBILE HOME*******/
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 @media (max-width: 700px) {
@@ -132,6 +138,7 @@ i  {
         display: relative;
         width: 100%;
         z-index: -1;
+        margin-top: 10%;
       }
      .home{
        display: absolute;
@@ -152,49 +159,51 @@ i  {
           font-size: 22px;
           text-decoration: none;
       }
-     /**** https://alvarotrigo.com/blog/hamburger-menu-css/****/
-     
-  .menu-button-container {
-    display: flex;
- 
-  }
-  .menu {
-    position: absolute;
-    top: 0;
-    margin-top: 10px;
-    left: 0;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-  }
-  #menu-toggle ~ .menu li{
-    height: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  #menu-toggle:checked ~ .menu li {
-    border: 1px solid #333;
-    height: 2.5em;
-    padding: 0.5em;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  .menu > li{
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0.5em 0;
-    width: 100%;
-    color: white;
-    background-color: #222;
-  }
-  .menu > li :not(:last-child) {
-    border-bottom: 1px solid #444;
-  }
-  
+      .menu-button-container {
+        display: flex;
+      }
+      .menu {
+        position: absolute;
+        top: 0;
+        margin-top: 80px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+      }
+      #menu-toggle ~ .menu li{
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      #menu-toggle:checked ~ .menu li{
+        border: 1px solid #333;
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      .menu > li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background-color: #222;
+      }
+      .menu > li:not(:last-child) {
+        border-bottom: 1px solid #444;
+      }
+      .menu li:hover {
+        background-color:#3985B1
+      }
+    
+
+
 /*********MOBILE ABOUT***********/
 .about{
     width: 100%;
@@ -351,6 +360,9 @@ i  {
   margin-left: auto;
   justify-content:center;
 }
+.web-design img{
+    width: 90%;
+}
 }
 /*********TABLET HOME***********/
 @media only screen and (min-width: 700px) and (max-width: 1200px){
@@ -459,6 +471,9 @@ i  {
 .heading h1{
   text-align: center;
 }
+.heading h2{
+    text-align: center;
+}
 .portfoliobackground{
   background-color: black;
 }
@@ -482,16 +497,16 @@ i  {
   grid-column: 3/ 8;
 }
 #gallery1 img{ 
-  width:100%;
-  height:45%;
+  width:350px;
+  height:300px;
 }
 #gallery2 img{
-  width:100%;
-  height:45%;
+  width:350px;
+  height:300px;
 }
 #gallery3 img{ 
-    width:100%;
-    height:40%;
+    width:350px;
+    height:300px;
   }
 
 /********TABLET PHOTOGRAPHY*****/
@@ -501,12 +516,13 @@ i  {
 .photos{
  display:grid;
  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
- grid-template-rows: 1fr 1fr 1fr 1fr;
+ grid-template-rows: 1fr 1fr;
  width:80%;
  justify-content:center ;
  margin-right:auto;
  margin-left:auto;
  margin-top:10%;
+ column-gap: 5px;
 }
 #photo1{
   grid-column: 1/10;
@@ -515,13 +531,13 @@ i  {
 }
 #photo2{
   grid-column:1/5;
-  width:100%;
-  height: 60%;
+  width:400px;
+  height:400px;
 }
 #photo3{
   grid-column:6/10;
-  width:100%;
-  height: 60%;
+  width:400px;
+  height:400px;
 }
 #photo4{
   grid-column: 1/10;
@@ -530,13 +546,13 @@ i  {
 }
 #photo5{
   grid-column: 1/5;
-  width:100%;
-  height: 60%;
+  width:400px;
+  height:400px;
 }
 #photo6{
   grid-column:6/10;
-  width:100%;
-  height: 60%;
+  width:400px;
+  height:400px;
 }
 /*********TABLET CONTACT********/
 .top-nav{
@@ -642,46 +658,56 @@ padding-bottom: 15%;
 .illustrations {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   width:80%;
   justify-content:center;
   margin-right:auto;
   margin-left:auto;
   margin-top:10%;
+  row-gap: 2px;
+  column-gap: 5px;
+
 }
  #illustration1{
    grid-column: 1/10;
    width:100%;
    height:60%;
+   
  }
  #illustration2{
    grid-column:1/4;
-   width:100%;
-   height: 60%;
+   width:400px;
+   height:400px;
  }
  #illustration3{
    grid-column:7/10;
-   width:100%;
-   height: 60%;
+   width:400px;
+   height:400px;
  }
  #illustration4{
    grid-column: 1/10;
    width:100%;
-   height: 40%;
+   height: 60%;
  }
  #illustration5{
    grid-column: 1/4;
-   width:100%;
-   height: 60%;
+   width:400px;
+   height: 400px;
  }
  #illustration6{
    grid-column:7/10;
-   width:100%;
-   height: 60%;
+   width:400px;
+   height: 400px;
  }
  /*****TABLET WEBDESIGN*****/
+ .web-design a{
+     text-decoration: none;
+     color: #74A4F0;
+     font-size: 24px;
+ }
  .design{
    background-color: black;
+   padding-bottom: 20%;
  }
  .web-design{
    display: block;
@@ -769,7 +795,6 @@ footer .fa{
       font-size: 24px;
   }
   .story p{
-    display: flex;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
@@ -795,11 +820,6 @@ footer .fa{
   .tabletstory p{
     display: block;
     padding-left: 50px;
-}
-.tabletstory p::after {
-  content: "";
-  clear: both;
-  display: table;
 }
 /********DESKTOP PORTFOLIO*******/
 .heading h1{
@@ -949,6 +969,7 @@ text-align: center;
 }
 .blackfooter{
   background-color: black;
+  margin-top: 5%;
 }
 /********DESKTOP PHOTOGRAPHY*******/
 .photography-background{
@@ -963,50 +984,57 @@ text-align: center;
   margin-left: auto;
   margin-right: auto;
   grid-column-gap: 10px;
-  grid-row-gap:2px;
+  grid-row-gap:10px;
 }
 #photo1{
   grid-column: 1span;
-  grid-row: 1 span;
-  width: 100%;
-  height:90%;
+  width: 400px;
+  height:340px;
+  border:solid white 2px;
+  
 
 }
 #photo2{
   grid-column:1span;
-  grid-row:1 span;
-  width: 100%;
-  height:60%;
+  width: 400px;
+  height:300px;
+  border:solid white 2px;
+  
 }
 #photo3{
   grid-column:1 span;
-  width: 100%;
-  grid-row:1 span;
-  height:90%;
+  width: 400px;
+  height:340px;
+  border:solid white 2px;
+  
 }
 #photo4{
   grid-column: 1 span;
-  width:100%;
-  grid-row:1 span;
-  height:60%;
+  width:400px;
+  height:250px;
+  border:solid white 2px;
+  
 }
 #photo5{
   grid-column:1 span;
-  width:100%;
-  grid-row:1 span;
-  height:90%;
- margin-top: -31%;
+  width:400px;
+  height:280px;
+  margin-top: -30px;
+  border:solid white 2px;
+  
 }
 #photo6{
   grid-column:1 span;
-  width:100%;
-  grid-row:1 span;
-  height:60%;
+  width:400px;
+  height:250px;
+  border:solid white 2px;
+  
 }
 /********DESKTOP ILLUSTRATION*******/
 .illustration-background{
   background-color: black;
 }
+
 .illustrations{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -1016,66 +1044,77 @@ text-align: center;
   margin-left: auto;
   margin-right: auto;
   grid-column-gap: 10px;
+  grid-row-gap:10px;
 }
 #illustration1{
   grid-column: 1span;
   grid-row: 1 span;
-  width: 100%;
-  height:70%;
+  width: 400px;
+  height:340px;
   order:1;
+  border:solid white 2px;
   
 }
 #illustration2{
   grid-column:1span;
   grid-row:1 span;
-  width: 100%;
-  height:70%;
+  width: 400px;
+  height:280px;
   order:5;
-  margin-top:-27%;
+  margin-top:-30px;
+  border:solid white 2px;
 
 }
 #illustration3{
   grid-column:1 span;
-  width: 100%;
+  width: 400px;
   grid-row:1 span;
-  height:50%;
+  height:250px;
   order:4;
+  border:solid white 2px;
 }
 #illustration4{
   grid-column: 1 span;
-  width:100%;
+  width:400px;
   grid-row:1 span;
-  height:50%;
+  height:300px;
   order:2;
+  border:solid white 2px;
 }
 #illustration5{
   grid-column:1 span;
-  width:100%;
+  width:400px;
   grid-row:1 span;
-  height:70%;
+  height:340px;
  order:3;
+ border:solid white 2px;
 }
 #illustration6{
   grid-column:1 span;
-  width:100%;
+  width:400px;
   grid-row:1 span;
-  height:50%;
+  height:250px;
   order:6;
+  border:solid white 2px;
 }
 /*********DESKTOP WEB DESIGN*******/
 .part{
-  width: 90%;
-  display: flex;
-  margin-left: 10%;
-  margin-right:10%;
+    display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right:auto;
  justify-content: center;
 }
-.part p{
+.part img{
+    width:70%;
+}
+.together{
   margin-left:30px;
-  width: 70%;
+  width: 80%;
 }
 .design{
   background-color: black;
+  padding-bottom: 10%;
 }
 .web-design h1{
   text-align: center;
