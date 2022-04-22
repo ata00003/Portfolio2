@@ -186,7 +186,7 @@ main span{
         padding: 0.5em;
         transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
       }
-      .menu > li {
+      .menu > li  {
         display: flex;
         justify-content: center;
         margin: 0;
@@ -199,8 +199,9 @@ main span{
         border-bottom: 1px solid #444;
       }
       .menu li:hover {
-        background-color:#3985B1
+        background-color:#3842b0
       }
+      
     
 
 
