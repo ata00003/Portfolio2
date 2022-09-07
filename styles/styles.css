@@ -723,7 +723,6 @@ padding-bottom: 15%;
  .web-design a{
      text-decoration: none;
      color: #74A4F0;
-     font-size: 24px;
  }
  .design{
    background-color: black;
@@ -1140,9 +1139,7 @@ text-align: center;
   text-align: center;
 }
 .part a{
-  margin-left:20%;
   color: #74A4F0;
-  font-size: 22px;
   text-decoration: none;
 }
 }
